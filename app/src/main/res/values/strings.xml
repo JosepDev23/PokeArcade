@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">PokeArcade</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login_button">Log in</string>
+    <string name="register_text">If not registered, click here</string>
+    <string name="signup_button">Sign up</string>
+    <string name="login_fragment_label">Login</string>
+    <string name="signup_fragment_label">Signup</string>
 </resources>
