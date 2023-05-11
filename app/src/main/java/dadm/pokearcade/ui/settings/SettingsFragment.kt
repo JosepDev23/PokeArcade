@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment
 import dadm.pokearcade.R
 import dadm.pokearcade.databinding.FragmentSettingsBinding
 
+/**
+ * The setting screen with the functionality to change language.
+ */
 class SettingsFragment: Fragment(R.layout.fragment_settings) {
     private var _binding: FragmentSettingsBinding? = null
     private val binding get() = _binding!!

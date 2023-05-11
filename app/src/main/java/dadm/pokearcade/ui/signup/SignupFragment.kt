@@ -10,6 +10,10 @@ import dadm.pokearcade.R
 import dadm.pokearcade.databinding.FragmentSignupBinding
 import dagger.hilt.android.AndroidEntryPoint
 
+/**
+ * Represents the signup functionality of the app. To create a new user you only need
+ * an username and a password.
+ */
 @AndroidEntryPoint
 class SignupFragment: Fragment(R.layout.fragment_signup) {
     private var _binding: FragmentSignupBinding? = null
