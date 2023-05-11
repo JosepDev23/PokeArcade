@@ -13,10 +13,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import dadm.pokearcade.R
 import dadm.pokearcade.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 /**
  * Class main activity
  */
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,8 +40,8 @@ class MainActivity : AppCompatActivity() {
                     binding.bottomNavigationView.visibility = View.VISIBLE
                 }
                 R.id.profileFragment -> {
-                binding.bottomNavigationView.visibility = View.VISIBLE
-            }
+                    binding.bottomNavigationView.visibility = View.VISIBLE
+                }
                 R.id.settingsFragment -> {
                     binding.bottomNavigationView.visibility = View.VISIBLE
                 }
