@@ -28,7 +28,14 @@
         android:id="@+id/gamesFragment"
         android:name="dadm.pokearcade.ui.games.GamesFragment"
         android:label="@string/fragment_games_label"
-        tools:layout="@layout/fragment_games" />
+        tools:layout="@layout/fragment_games">
+        <action
+            android:id="@+id/action_gamesFragment_to_wordleFragment"
+            app:destination="@+id/wordleFragment" />
+        <action
+            android:id="@+id/action_gamesFragment_to_guessPokemonFragment"
+            app:destination="@+id/guessPokemonFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/settingsFragment"
@@ -41,5 +48,15 @@
     android:name="dadm.pokearcade.ui.profile.ProfileFragment"
     android:label="@string/fragment_profile_label"
     tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/wordleFragment"
+        android:name="dadm.pokearcade.ui.wordle.WordleFragment"
+        android:label="WordleFragment"
+        />
+    <fragment
+        android:id="@+id/guessPokemonFragment"
+        android:name="dadm.pokearcade.ui.guessPokemon.GuessPokemonFragment"
+        android:label="GuessPokemonFragment" />
 
 </navigation>
