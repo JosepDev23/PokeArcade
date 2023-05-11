@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import dadm.pokearcade.R
 import dadm.pokearcade.databinding.FragmentSignupBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class SignupFragment: Fragment() {
+@AndroidEntryPoint
+class SignupFragment: Fragment(R.layout.fragment_signup) {
     private var _binding: FragmentSignupBinding? = null
     private val binding get() = _binding!!
 
