@@ -15,4 +15,5 @@
     <string name="fragment_profile_label">Profile</string>
     <string name="Wordle">Wordle</string>
     <string name="GuessThePokemon">Guess the Pokemon</string>
+    <string name="welcome">Welcome Juan</string>
 </resources>
