@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import dadm.pokearcade.R
 import dadm.pokearcade.databinding.FragmentSignupBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,6 +39,18 @@ class SignupFragment: Fragment(R.layout.fragment_signup) {
             val username = binding.usernameEditText.text.toString()
             val password = binding.passwordEditText.text.toString()
             viewModel.signupUser(username, password)
+        }
+
+        viewModel.signupStatus.observe(viewLifecycleOwner) { result ->
+            if (result.isSuccess) {
+                Snackbar.make(binding.root, "User registered successfully", Snackbar.LENGTH_SHORT)
+                    .show()
+            } else {
+                Snackbar.make(binding.root, "User registration failed", Snackbar.LENGTH_SHORT)
+                    .show()
+            }
+            val action = SignupFragmentDirections.actionSignupFragmentToLoginFragment()
+            findNavController().navigate(action)
         }
     }
 

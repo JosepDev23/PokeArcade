@@ -12,9 +12,17 @@ class SignupViewModel @Inject constructor(
     var usersRepository: UsersRepository
 ): ViewModel() {
 
+    private val _signupStatus = MutableLiveData<Result<Unit>>()
+    val signupStatus: LiveData<Result<Unit>> get() = _signupStatus
+
     fun signupUser(username: String, password: String) {
         viewModelScope.launch {
-            usersRepository.postUser(User(username, password, 0, 0))
+            try {
+                usersRepository.postUser(User(username, password, 0, 0))
+                _signupStatus.value = Result.success(Unit)
+            } catch (e: Exception) {
+                _signupStatus.value = Result.failure(e)
+            }
         }
     }
 }
