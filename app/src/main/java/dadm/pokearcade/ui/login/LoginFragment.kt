@@ -26,7 +26,8 @@ class LoginFragment: Fragment() {
         _binding = FragmentLoginBinding.bind(view)
 
         binding.loginButton.setOnClickListener {
-
+            val action = LoginFragmentDirections.actionLoginFragmentToGamesFragment()
+            findNavController().navigate(action)
         }
 
         binding.registerTextView.setOnClickListener {
