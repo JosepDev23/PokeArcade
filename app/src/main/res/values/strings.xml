@@ -7,4 +7,10 @@
     <string name="signup_button">Sign up</string>
     <string name="login_fragment_label">Login</string>
     <string name="signup_fragment_label">Signup</string>
+    <string name="games">Games</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="fragment_games_label">Games</string>
+    <string name="fragment_settings_label">Settings</string>
+    <string name="fragment_profile_label">Profile</string>
 </resources>

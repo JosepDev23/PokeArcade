@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_loginFragment_to_signupFragment"
             app:destination="@+id/signupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_gamesFragment"
+            app:destination="@+id/gamesFragment" />
     </fragment>
 
     <fragment
@@ -21,5 +24,22 @@
         android:label="@string/signup_fragment_label"
         tools:layout="@layout/fragment_signup" />
 
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="dadm.pokearcade.ui.games.GamesFragment"
+        android:label="@string/fragment_games_label"
+        tools:layout="@layout/fragment_games" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="dadm.pokearcade.ui.settings.SettingsFragment"
+        android:label="@string/fragment_settings_label"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+    android:id="@+id/profileFragment"
+    android:name="dadm.pokearcade.ui.profile.ProfileFragment"
+    android:label="@string/fragment_profile_label"
+    tools:layout="@layout/fragment_profile" />
 
 </navigation>
