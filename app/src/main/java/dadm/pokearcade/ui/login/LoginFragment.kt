@@ -9,6 +9,10 @@ import androidx.navigation.fragment.findNavController
 import dadm.pokearcade.R
 import dadm.pokearcade.databinding.FragmentLoginBinding
 
+/**
+ * Represents the login functionality of the app. It contains methods for user authentication
+ * and the navigation to user signup.
+ */
 class LoginFragment: Fragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
