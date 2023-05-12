@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         /**
          * The navigation bar only show on the game, profile and settings fragment.
          */
+
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.gamesFragment -> {
