@@ -13,5 +13,6 @@ abstract class PokemonsBinderModule {
     @Binds
     abstract fun bindPokemonsRepository(pokemonsRepositoryImpl: PokemonsRepositoryImpl): PokemonsRepository
 
-
+    @Binds
+    abstract fun bindPokemonsDataSource(pokemonsRepositoryImpl: PokemonsRepositoryImpl): PokemonsRepository
 }

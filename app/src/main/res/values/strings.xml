@@ -29,4 +29,5 @@
     <string name="title_username_settings">Username</string>
     <string name="title_language_settings">Language</string>
     <string name="title_dark_mode_settings">Dark mode</string>
+    <string name="InternetErrorMsg">Internet connection is not available</string>
 </resources>
