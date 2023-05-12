@@ -16,4 +16,7 @@
     <string name="Wordle">Wordle</string>
     <string name="GuessThePokemon">Guess the Pokemon</string>
     <string name="welcome">Welcome Juan</string>
+    <string name="total_wins">Total wins: %d</string>
+    <string name="total_games">Total games: %d</string>
+    <string name="username_profile">%1s</string>
 </resources>
