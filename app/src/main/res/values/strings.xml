@@ -23,4 +23,7 @@
     <string name="pokemonQuestion">Who is that pokemon?</string>
     <string name="fragment_wordle_label">Wordle</string>
     <string name="fragment_guesspokemon_label">Guess the Pokemon</string>
+    <string name="total_wins">Total wins: %d</string>
+    <string name="total_games">Total games: %d</string>
+    <string name="username_profile">%1s</string>
 </resources>
