@@ -56,11 +56,13 @@
     <fragment
         android:id="@+id/wordleFragment"
         android:name="dadm.pokearcade.ui.wordle.WordleFragment"
-        android:label="WordleFragment"
+        android:label="@string/fragment_wordle_label"
+        tools:layout="@layout/fragment_wordle"
         />
     <fragment
         android:id="@+id/guessPokemonFragment"
         android:name="dadm.pokearcade.ui.guessPokemon.GuessPokemonFragment"
-        android:label="GuessPokemonFragment" />
+        android:label="@string/fragment_guesspokemon_label"
+        tools:layout="@layout/fragment_guesspokemon"/>
 
 </navigation>

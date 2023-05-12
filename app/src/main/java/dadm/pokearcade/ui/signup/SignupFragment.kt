@@ -17,7 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
  * an username and a password.
  */
 @AndroidEntryPoint
-class SignupFragment: Fragment(R.layout.fragment_signup) {
+class SignupFragment : Fragment(R.layout.fragment_signup) {
     private var _binding: FragmentSignupBinding? = null
     private val binding get() = _binding!!
 

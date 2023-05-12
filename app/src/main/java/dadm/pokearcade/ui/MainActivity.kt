@@ -60,7 +60,11 @@ class MainActivity : AppCompatActivity() {
             setOf(
                 R.id.gamesFragment,
                 R.id.profileFragment,
-                R.id.settingsFragment
+                R.id.settingsFragment,
+                R.id.guessPokemonFragment,
+                R.id.wordleFragment,
+                R.id.loginFragment,
+                R.id.signupFragment
             )
         )
         setupActionBarWithNavController(navController, appBarConfig)

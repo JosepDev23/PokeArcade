@@ -16,4 +16,11 @@
     <string name="Wordle">Wordle</string>
     <string name="GuessThePokemon">Guess the Pokemon</string>
     <string name="welcome">Welcome Juan</string>
+    <string name="namePokemon1">Pokemon1</string>
+    <string name="namePokemon2">Pokemon2</string>
+    <string name="namePokemon3">Pokemon3</string>
+    <string name="namePokemon4">Pokemon4</string>
+    <string name="pokemonQuestion">Who is that pokemon?</string>
+    <string name="fragment_wordle_label">Wordle</string>
+    <string name="fragment_guesspokemon_label">Guess the Pokemon</string>
 </resources>

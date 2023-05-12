@@ -4,14 +4,74 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/GuessThePokemon"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imagePokemon"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/charizard"
+        app:layout_constraintBottom_toTopOf="@id/pokemonQuestion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/pokemonQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/pokemonQuestion"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/btnPokemon1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagePokemon" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPokemon1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/namePokemon1"
+        app:layout_constraintBottom_toTopOf="@id/btnPokemon2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pokemonQuestion"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPokemon2"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/namePokemon2"
+        app:layout_constraintBottom_toTopOf="@id/btnPokemon3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPokemon1"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPokemon3"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/namePokemon3"
+        app:layout_constraintBottom_toTopOf="@id/btnPokemon4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPokemon2"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPokemon4"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="@string/namePokemon4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPokemon3"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintWidth_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
