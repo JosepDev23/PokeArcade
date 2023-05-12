@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="welcome">Welcome Juan</string>
+    <string name="namePokemon1">Pokemon1</string>
+    <string name="namePokemon2">Pokemon2</string>
+    <string name="pokemonQuestion">¿Quién es el Pokemon de arriba?</string>
 </resources>

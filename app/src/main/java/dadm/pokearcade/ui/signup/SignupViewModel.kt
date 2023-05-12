@@ -1,6 +1,9 @@
 package dadm.pokearcade.ui.signup
 
-import androidx.lifecycle.*
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import dadm.pokearcade.data.users.UsersRepository
 import dadm.pokearcade.domain.model.User
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -10,7 +13,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SignupViewModel @Inject constructor(
     var usersRepository: UsersRepository
-): ViewModel() {
+) : ViewModel() {
 
     private val _signupStatus = MutableLiveData<Result<Unit>>()
     val signupStatus: LiveData<Result<Unit>> get() = _signupStatus
