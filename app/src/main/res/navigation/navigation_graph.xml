@@ -22,7 +22,7 @@
         android:id="@+id/signupFragment"
         android:name="dadm.pokearcade.ui.signup.SignupFragment"
         android:label="@string/signup_fragment_label"
-        tools:layout="@layout/fragment_signup" >
+        tools:layout="@layout/fragment_signup">
         <action
             android:id="@+id/action_signupFragment_to_loginFragment"
             app:destination="@+id/loginFragment" />
@@ -48,21 +48,20 @@
         tools:layout="@layout/fragment_settings" />
 
     <fragment
-    android:id="@+id/profileFragment"
-    android:name="dadm.pokearcade.ui.profile.ProfileFragment"
-    android:label="@string/fragment_profile_label"
-    tools:layout="@layout/fragment_profile" />
+        android:id="@+id/profileFragment"
+        android:name="dadm.pokearcade.ui.profile.ProfileFragment"
+        android:label="@string/fragment_profile_label"
+        tools:layout="@layout/fragment_profile" />
 
     <fragment
         android:id="@+id/wordleFragment"
         android:name="dadm.pokearcade.ui.wordle.WordleFragment"
         android:label="@string/fragment_wordle_label"
-        tools:layout="@layout/fragment_wordle"
-        />
+        tools:layout="@layout/fragment_wordle" />
     <fragment
         android:id="@+id/guessPokemonFragment"
         android:name="dadm.pokearcade.ui.guessPokemon.GuessPokemonFragment"
         android:label="@string/fragment_guesspokemon_label"
-        tools:layout="@layout/fragment_guesspokemon"/>
+        tools:layout="@layout/fragment_guesspokemon" />
 
 </navigation>

@@ -6,13 +6,12 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import dadm.pokearcade.R
 import dadm.pokearcade.databinding.FragmentGamesBinding
-import dadm.pokearcade.ui.login.LoginFragmentDirections
 
 /**
  * The home screen of the app. It contains the navigation
  * to the games.
  */
-class GamesFragment: Fragment(R.layout.fragment_games) {
+class GamesFragment : Fragment(R.layout.fragment_games) {
     private var _binding: FragmentGamesBinding? = null
     private val binding get() = _binding!!
 

@@ -10,7 +10,7 @@ import dadm.pokearcade.databinding.FragmentProfileBinding
  * Represents the current user information with the username, a default profile picture
  * and the number of games played and won.
  */
-class ProfileFragment: Fragment(R.layout.fragment_profile) {
+class ProfileFragment : Fragment(R.layout.fragment_profile) {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!
 
