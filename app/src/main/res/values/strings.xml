@@ -47,4 +47,6 @@
     <string name="paldea">Paldea</string>
     <string name="kartana">Kartana</string>
     <string name="kekrom">Zekrom</string>
+    <string name="answer">Answer</string>
+    <string name="submit">Submit</string>
 </resources>

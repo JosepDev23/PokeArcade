@@ -40,4 +40,29 @@ class LoginViewModel @Inject constructor(
             }
         }
     }
+
+
+    suspend fun handleVictory() {
+        usersRepository.updateUser(
+            User(
+                user.value!!.id,
+                user.value!!.username,
+                user.value!!.password,
+                user.value!!.wins + 1,
+                user.value!!.games + 1
+            )
+        )
+    }
+
+    suspend fun handleLose() {
+        usersRepository.updateUser(
+            User(
+                user.value!!.id,
+                user.value!!.username,
+                user.value!!.password,
+                user.value!!.wins,
+                user.value!!.games + 1
+            )
+        )
+    }
 }

@@ -4,13 +4,16 @@ import android.app.Application
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import dadm.pokearcade.R
+import dadm.pokearcade.data.users.UsersRepository
 import dadm.pokearcade.domain.model.Difficulty
 import dadm.pokearcade.domain.model.Quiz
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class PokequizViewModel @Inject constructor(application: Application) : ViewModel() {
+class PokequizViewModel @Inject constructor(
+    application: Application
+) : ViewModel() {
     val context: Context = application.applicationContext
     private val quizzes: List<Quiz> = listOf(
         Quiz(
