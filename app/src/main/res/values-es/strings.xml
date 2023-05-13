@@ -22,5 +22,12 @@
     <string name="login">Iniciar sesión</string>
     <string name="signup">Registrarse</string>
     <string name="welcome_msg">Bienvenido %1$s!</string>
+    <string name="InternetErrorMsg">No tiene acceso a internet</string>
+    <string name="correctAnswer">CORRECTO !!!</string>
+    <string name="incorrectAnswer">INCORRECTO</string>
+    <string name="correctMessage">Muy bien!</string>
+    <string name="incorrectMessage">Ups! Este Pokemon es: %1$s !</string>
+    <string name="dialogContinue">Reintentar</string>
+    <string name="dialogExit">Salir</string>
     <string name="title_difficulty_settings">Dificultad</string>
 </resources>
