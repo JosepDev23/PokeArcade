@@ -5,6 +5,7 @@ object UsersContract {
 
     object entries {
         const val TABLE_USERS = "users"
+        const val COLUMN_ID = "id"
         const val COLUMN_USERNAME = "username"
         const val COLUMN_PASSWORD = "password"
         const val COLUMN_WINS = "wins"
