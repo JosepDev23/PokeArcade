@@ -26,4 +26,25 @@
     <string name="title_dark_mode_settings">Dark mode</string>
     <string name="welcome_msg">Welcome %1$s!</string>
     <string name="imageDescription">The pokemon image the user has to guess.</string>
+    <string name="pokequiz" translatable="false">PokeQuiz</string>
+    <string name="question_1">What is Pikachu\'s evolution?</string>
+    <string name="question_2">What is the fire starter of the first generation?</string>
+    <string name="question_3">What is the water starter of the first generation?</string>
+    <string name="question_4">What is the grass starter of the first generation?</string>
+    <string name="question_5">What is the name of the region of the first generation?</string>
+    <string name="question_6">What is the name of the semi-legendary Dragon/Flying type Pokémon from the first generation?</string>
+    <string name="question_7">What is the name of the purple Pokémon that transforms into other Pokémon?</string>
+    <string name="question_8">What is the name of the region of the ninth generation?</string>
+    <string name="question_9">What is the name of the Grass/Steel type Pokémon introduced on the seventh generation?</string>
+    <string name="question_10">What is the name of the Dragon/Electric type legendary Pokémon introduced on the fifth generation?</string>
+    <string name="raichu">Raichu</string>
+    <string name="charmander">Charmander</string>
+    <string name="squirtle">Squirtle</string>
+    <string name="bulbasaur">Bulbasaur</string>
+    <string name="kanto">Kanto</string>
+    <string name="dragonite">Dragonite</string>
+    <string name="ditto">Ditto</string>
+    <string name="paldea">Paldea</string>
+    <string name="kartana">Kartana</string>
+    <string name="kekrom">Zekrom</string>
 </resources>

@@ -55,9 +55,9 @@
 
     <fragment
         android:id="@+id/wordleFragment"
-        android:name="dadm.pokearcade.ui.wordle.WordleFragment"
-        android:label="@string/fragment_wordle_label"
-        tools:layout="@layout/fragment_wordle" />
+        android:name="dadm.pokearcade.ui.pokequiz.PokequizFragment"
+        android:label="@string/pokequiz"
+        tools:layout="@layout/fragment_pokequiz" />
     <fragment
         android:id="@+id/guessPokemonFragment"
         android:name="dadm.pokearcade.ui.guessPokemon.GuessPokemonFragment"
