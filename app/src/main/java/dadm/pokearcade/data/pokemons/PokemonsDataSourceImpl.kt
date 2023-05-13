@@ -1,5 +1,6 @@
 package dadm.pokearcade.data.pokemons
 
+import android.util.Log
 import dadm.pokearcade.data.pokemons.model.PokemonDto
 import okhttp3.MediaType
 import okhttp3.ResponseBody
@@ -7,12 +8,11 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.http.GET
 import retrofit2.http.Path
-import retrofit2.http.Query
 import javax.inject.Inject
 import kotlin.random.Random
 
 class PokemonsDataSourceImpl
-@Inject constructor(retrofit: Retrofit): PokemonsDataSource {
+@Inject constructor(retrofit: Retrofit) : PokemonsDataSource {
 
     private val retrofitPokemonService = retrofit.create(PokemonRetrofit::class.java)
 
@@ -32,5 +32,24 @@ class PokemonsDataSourceImpl
                 ResponseBody.create(MediaType.parse("text/plain"), e.toString())
             )
         }
+    }
+
+    override suspend fun getPokemonList(): List<Response<PokemonDto>> {
+        var count = 0
+        val limit = 4
+        val pokemonList = mutableListOf<Response<PokemonDto>>()
+
+        while (count < limit) {
+            val randomPokemonId = Random.nextInt(1, 152) // Generate a random Pokemon Id
+            try {
+                pokemonList.add(retrofitPokemonService.getPokemon(randomPokemonId))
+            } catch (e: Exception) {
+                System.err.println(e.toString())
+                return emptyList()
+            }
+            count++
+        }
+        Log.d("pokemonList", pokemonList.toString())
+        return pokemonList
     }
 }

@@ -16,4 +16,12 @@ class PokemonsRepositoryImpl
             Result.failure(NoInternetException())
         }
     }
+
+    override suspend fun getPokemonList(): List<Result<Pokemon>> {
+        return if (connectivityChecker.isConnectionAvailable()) {
+            pokemonsDataSource.getPokemonList().map { it.toDomain() }
+        } else {
+            error(NoInternetException())
+        }
+    }
 }

@@ -15,21 +15,31 @@ class GuessPokemonViewModel @Inject constructor(
     private val pokemonsRepository: PokemonsRepository
 ) : ViewModel() {
     private val _pokemon = MutableLiveData<Pokemon>()
+    private val _pokemonList = MutableLiveData<List<Pokemon>>()
     private val _error = MutableLiveData<Throwable?>()
 
     val pokemon: LiveData<Pokemon> = _pokemon
+    val pokemonList: LiveData<List<Pokemon>> = _pokemonList
     val error: LiveData<Throwable?> = _error
 
     fun getPokemon() {
         viewModelScope.launch {
             pokemonsRepository.getPokemon()
-                .onSuccess  {
+                .onSuccess {
                     _pokemon.value = it
                 }
-                .onFailure  {
+                .onFailure {
                     _error.value = it
                 }
 
+        }
+    }
+
+    fun getPokemonList() {
+        viewModelScope.launch {
+            _pokemonList.value = pokemonsRepository.getPokemonList()
+                .map { it.getOrThrow() }
+            _pokemon.value = _pokemonList.value?.random()
         }
     }
 

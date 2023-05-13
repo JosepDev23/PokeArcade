@@ -10,7 +10,7 @@
         android:id="@+id/imagePokemon"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/charizard"
+
         app:layout_constraintBottom_toTopOf="@id/pokemonQuestion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

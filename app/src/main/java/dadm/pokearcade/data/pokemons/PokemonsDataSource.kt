@@ -5,4 +5,5 @@ import retrofit2.Response
 
 interface PokemonsDataSource {
     suspend fun getPokemon(): Response<PokemonDto>
+    suspend fun getPokemonList(): List<Response<PokemonDto>>
 }
