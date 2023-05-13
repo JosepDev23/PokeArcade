@@ -1,11 +1,15 @@
 package dadm.pokearcade.ui.guessPokemon
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.NavHostFragment
+
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.android.material.snackbar.Snackbar
@@ -33,7 +37,6 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
         viewModel.getPokemonList()
 
         viewModel.pokemon.observe(viewLifecycleOwner) { pokemon ->
-            System.out.println("Pokemon: " + pokemon.name)
             _answerPokemonName.value = pokemon.name
             // Load the Pokémon image using Glide
             Glide.with(this)
@@ -54,39 +57,59 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
         }
 
         binding.btnPokemon1.setOnClickListener {
-            if (_answerPokemonName.value == binding.btnPokemon1.text) Snackbar.make(
+            val isCorrect = _answerPokemonName.value == binding.btnPokemon1.text
+            showResultDialog(isCorrect, _answerPokemonName.value.toString(), viewModel)
+            if (isCorrect) Snackbar.make(
                 binding.root,
                 "Correct!",
                 Snackbar.LENGTH_LONG
             ).show()
             else Snackbar.make(binding.root, "Incorrect!", Snackbar.LENGTH_LONG).show()
+            //restartGame()
         }
 
         binding.btnPokemon2.setOnClickListener {
-            if (_answerPokemonName.value == binding.btnPokemon2.text) Snackbar.make(
+            val isCorrect = _answerPokemonName.value == binding.btnPokemon2.text
+            showResultDialog(isCorrect, _answerPokemonName.value.toString(), viewModel)
+            if (isCorrect) Snackbar.make(
                 binding.root,
                 "Correct!",
                 Snackbar.LENGTH_LONG
             ).show()
             else Snackbar.make(binding.root, "Incorrect!", Snackbar.LENGTH_LONG).show()
+            //restartGame()
         }
 
         binding.btnPokemon3.setOnClickListener {
-            if (_answerPokemonName.value== binding.btnPokemon3.text) Snackbar.make(
+            val isCorrect = _answerPokemonName.value == binding.btnPokemon3.text
+            showResultDialog(isCorrect, _answerPokemonName.value.toString(), viewModel)
+            if (isCorrect) Snackbar.make(
                 binding.root,
                 "Correct!",
                 Snackbar.LENGTH_LONG
             ).show()
             else Snackbar.make(binding.root, "Incorrect!", Snackbar.LENGTH_LONG).show()
+            //restartGame()
         }
 
         binding.btnPokemon4.setOnClickListener {
-            if (_answerPokemonName.value == binding.btnPokemon4.text) Snackbar.make(
+            val isCorrect = _answerPokemonName.value == binding.btnPokemon4.text
+            showResultDialog(isCorrect, _answerPokemonName.value.toString(), viewModel)
+            if (isCorrect) Snackbar.make(
                 binding.root,
                 "Correct!",
                 Snackbar.LENGTH_LONG
             ).show()
             else Snackbar.make(binding.root, "Incorrect!", Snackbar.LENGTH_LONG).show()
+            //restartGame()
+        }
+
+        viewModel.restartGame.observe(viewLifecycleOwner) { restartGame ->
+            Log.d("GuessPokemonFragment", "restartGame: $restartGame")
+            if (restartGame) {
+                restartGame()
+                viewModel.resetRestartGame()
+            }
         }
 
         viewModel.error.observe(viewLifecycleOwner) { error ->
@@ -94,7 +117,19 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
                 Snackbar.make(binding.root, error.message.toString(), Snackbar.LENGTH_LONG).show()
                 viewModel.resetError()
             }
+
         }
+    }
+
+    private fun showResultDialog(isCorrect: Boolean, pokemonName: String, viewModel: GuessPokemonViewModel) {
+        val resultDialogFragment = ResultDialogFragment(isCorrect, pokemonName, viewModel)
+        resultDialogFragment.show(parentFragmentManager, "ResultDialog")
+    }
+
+
+    private fun restartGame() {
+        val navController = findNavController()
+        navController.navigate(R.id.guessPokemonFragment)
     }
 
     override fun onDestroyView() {

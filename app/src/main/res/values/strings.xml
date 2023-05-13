@@ -27,4 +27,10 @@
     <string name="InternetErrorMsg">Internet connection is not available</string>
     <string name="welcome_msg">Welcome %1$s!</string>
     <string name="imageDescription">The pokemon image the user has to guess.</string>
+    <string name="correctAnswer">CORRECT !!!</string>
+    <string name="incorrectAnswer">"INCORRECT "</string>
+    <string name="correctMessage">Good Job!</string>
+    <string name="incorrectMessage">"Ups! This Pokemon is: %1$s!"</string>
+    <string name="dialogContinue">Again</string>
+    <string name="dialogExit">Exit</string>
 </resources>
