@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">PokeArcade</string>
     <string name="username_hint">Username</string>
@@ -25,5 +24,6 @@
     <string name="title_username_settings">Username</string>
     <string name="title_language_settings">Language</string>
     <string name="title_dark_mode_settings">Dark mode</string>
+    <string name="welcome_msg">Welcome %1$s!</string>
     <string name="imageDescription">The pokemon image the user has to guess.</string>
 </resources>
