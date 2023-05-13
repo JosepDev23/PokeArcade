@@ -1,5 +1,6 @@
 package dadm.pokearcade.data.users
 
+import android.util.Log
 import dadm.pokearcade.data.users.model.toDomain
 import dadm.pokearcade.data.users.model.toDto
 import dadm.pokearcade.domain.model.User
@@ -12,7 +13,7 @@ import javax.inject.Inject
  */
 class UsersRepositoryImpl @Inject constructor(
     private val usersDataSource: UsersDataSource
-): UsersRepository {
+) : UsersRepository {
 
     /** Register a new user with the user domain. */
     override suspend fun postUser(user: User) {

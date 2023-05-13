@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import dadm.pokearcade.data.users.UsersContract.entries.COLUMN_GAMES
+import dadm.pokearcade.data.users.UsersContract.entries.COLUMN_ID
 import dadm.pokearcade.data.users.UsersContract.entries.COLUMN_PASSWORD
 import dadm.pokearcade.data.users.UsersContract.entries.COLUMN_USERNAME
 import dadm.pokearcade.data.users.UsersContract.entries.COLUMN_WINS
@@ -16,6 +17,9 @@ import dadm.pokearcade.data.users.UsersContract.entries.TABLE_USERS
 @Entity(tableName = TABLE_USERS)
 data class UserDto(
     @PrimaryKey
+    @ColumnInfo(name = COLUMN_ID)
+    val id: Int,
+
     @ColumnInfo(name = COLUMN_USERNAME)
     val username: String,
 
