@@ -7,6 +7,13 @@
         app:useSimpleSummaryProvider="true"
         android:hint="username"/>
     <ListPreference
+        android:key="difficulty"
+        android:title="@string/title_difficulty_settings"
+        app:useSimpleSummaryProvider="true"
+        android:defaultValue="easy"
+        android:entries="@array/game_difficulty_options"
+        android:entryValues="@array/game_difficulty_codes"/>
+    <ListPreference
         android:key="language"
         android:title="@string/title_language_settings"
         app:useSimpleSummaryProvider="true"
