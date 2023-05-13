@@ -1,13 +1,15 @@
 package dadm.pokearcade.data.pokemons
 
 import dadm.pokearcade.data.pokemons.model.PokemonDto
-import dadm.pokearcade.domain.model.Pokemon
 import okhttp3.MediaType
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.http.GET
+import retrofit2.http.Path
+import retrofit2.http.Query
 import javax.inject.Inject
+import kotlin.random.Random
 
 class PokemonsDataSourceImpl
 @Inject constructor(retrofit: Retrofit): PokemonsDataSource {
@@ -15,20 +17,19 @@ class PokemonsDataSourceImpl
     private val retrofitPokemonService = retrofit.create(PokemonRetrofit::class.java)
 
     interface PokemonRetrofit {
-        @GET("https://pokeapi.co/api/v2/pokemon/151") //Número ramdom de 1 a 151 (primera generación)
-        suspend fun getPokemon(): Response<PokemonDto>
+        @GET("api/v2/pokemon/{id}") //Número ramdom de 1 a 151 (primera generación)
+        suspend fun getPokemon(@Path("id") id: Int): Response<PokemonDto>
     }
 
     override suspend fun getPokemon(): Response<PokemonDto> {
-        //https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/151.png
+        val randomPokemonId = Random.nextInt(1, 152) // Generate a random Pokemon Id
         return try {
-            retrofitPokemonService.getPokemon()
+            retrofitPokemonService.getPokemon(randomPokemonId)
         } catch (e: Exception) {
+            System.err.println(e.toString())
             Response.error(
                 400,
-                ResponseBody.create(
-                    MediaType.parse("text/plain"), e.toString()
-                )
+                ResponseBody.create(MediaType.parse("text/plain"), e.toString())
             )
         }
     }

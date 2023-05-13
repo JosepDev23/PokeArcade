@@ -24,9 +24,8 @@ class PokemonsProviderModule {
     @Singleton
     fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://pokeapi.co/api/v2/")
+            .baseUrl("https://pokeapi.co/")
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
-
     }
 }

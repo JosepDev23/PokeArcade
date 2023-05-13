@@ -1,5 +1,7 @@
 package dadm.pokearcade.di
 
+import dadm.pokearcade.data.pokemons.PokemonsDataSource
+import dadm.pokearcade.data.pokemons.PokemonsDataSourceImpl
 import dadm.pokearcade.data.pokemons.PokemonsRepository
 import dadm.pokearcade.data.pokemons.PokemonsRepositoryImpl
 import dagger.Binds
@@ -14,5 +16,5 @@ abstract class PokemonsBinderModule {
     abstract fun bindPokemonsRepository(pokemonsRepositoryImpl: PokemonsRepositoryImpl): PokemonsRepository
 
     @Binds
-    abstract fun bindPokemonsDataSource(pokemonsRepositoryImpl: PokemonsRepositoryImpl): PokemonsRepository
+    abstract fun bindPokemonsDataSource(pokemonsDataSourceImpl: PokemonsDataSourceImpl): PokemonsDataSource
 }

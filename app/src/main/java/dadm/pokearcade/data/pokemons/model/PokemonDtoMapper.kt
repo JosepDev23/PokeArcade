@@ -7,7 +7,7 @@ import java.io.IOException
 fun PokemonDto.toDomain(): Pokemon = Pokemon(
     id = id,
     name = name,
-    image = image
+    image = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + id + ".png"
 )
 
 fun Response<PokemonDto>.toDomain() =
