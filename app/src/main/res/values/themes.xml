@@ -2,15 +2,25 @@
     <!-- Base application theme. -->
     <style name="Theme.PokeArcade" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">@color/yellow_500</item>
+        <item name="colorPrimaryVariant">@color/yellow_700</item>
+        <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="MaterialButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/materialButtonMain</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">32dp</item>
+        <!-- BackgroundTint = BackgroundColor-->
+        <item name="backgroundTint">@color/materialButtonTint</item>
+        <!-- RippleColor = Color pressing -->
+        <item name="rippleColor">@color/materialButtonRipple</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>

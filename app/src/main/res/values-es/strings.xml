@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">Bienvenido Juan</string>
+    <string name="pokemonQuestion">¿Quién es ese pokemon?</string>
+    <string name="username_hint">Usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="register_text">Si no está registrado, click aquí</string>
+    <string name="games">Juegos</string>
+    <string name="profile">Perfil</string>
+    <string name="settings">Configuración</string>
+    <string name="GuessThePokemon">Adivina el pokemon</string>
+    <string name="fragment_guesspokemon_label">Adivina el pokemon</string>
+    <string name="total_wins">Victorias: %d</string>
+    <string name="total_games">Partidas: %d</string>
+    <string name="title_username_settings">Usuario</string>
+    <string name="title_language_settings">Lenguaje</string>
+    <string name="title_dark_mode_settings">Modo oscuro</string>
+    <string name="imageDescription">La imagen del pokemon que el usuario debe adivinar.</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="signup">Registrarse</string>
+    <string name="welcome_msg">Bienvenido %1$s!</string>
+</resources>
