@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name" translatable="false">PokeArcade</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="login">LogIn</string>
+    <string name="register_text">If not registered, click here</string>
+    <string name="signup">SignUp</string>
+    <string name="games">Games</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="Wordle" translatable="false">Wordle</string>
+    <string name="GuessThePokemon">Guess the Pokemon</string>
     <string name="welcome">Welcome Juan</string>
-    <string name="namePokemon1">Pokemon1</string>
-    <string name="namePokemon2">Pokemon2</string>
-    <string name="pokemonQuestion">¿Quién es el Pokemon de arriba?</string>
+    <string name="namePokemon1" translatable="false">Pokemon1</string>
+    <string name="namePokemon2" translatable="false">Pokemon2</string>
+    <string name="namePokemon3" translatable="false">Pokemon3</string>
+    <string name="namePokemon4" translatable="false">Pokemon4</string>
+    <string name="pokemonQuestion">Who is that pokemon?</string>
+    <string name="fragment_wordle_label" translatable="false">Wordle</string>
+    <string name="fragment_guesspokemon_label">Guess the Pokemon</string>
+    <string name="total_wins">Total wins: %d</string>
+    <string name="total_games">Total games: %d</string>
+    <string name="username_profile" translatable="false">%1s</string>
+    <string name="title_username_settings">Username</string>
+    <string name="title_language_settings">Language</string>
+    <string name="title_dark_mode_settings">Dark mode</string>
+    <string name="imageDescription">The pokemon image the user has to guess.</string>
 </resources>

@@ -7,6 +7,9 @@ import dadm.pokearcade.data.users.UsersContract.entries.TABLE_USERS
 import dadm.pokearcade.data.users.model.UserDto
 import kotlinx.coroutines.flow.Flow
 
+/**
+ * The user DAO. On conflict username, replace strategy.
+ */
 @Dao
 interface UsersDao {
 

@@ -9,6 +9,7 @@ import dadm.pokearcade.domain.model.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import kotlin.random.Random
 
 @HiltViewModel
 class SignupViewModel @Inject constructor(
@@ -21,7 +22,7 @@ class SignupViewModel @Inject constructor(
     fun signupUser(username: String, password: String) {
         viewModelScope.launch {
             try {
-                usersRepository.postUser(User(username, password, 0, 0))
+                usersRepository.postUser(User(Random.nextInt(), username, password, 0, 0))
                 _signupStatus.value = Result.success(Unit)
             } catch (e: Exception) {
                 _signupStatus.value = Result.failure(e)
