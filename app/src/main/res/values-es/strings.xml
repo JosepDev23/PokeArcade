@@ -8,9 +8,6 @@
     <string name="games">Juegos</string>
     <string name="profile">Perfil</string>
     <string name="settings">Configuración</string>
-    <string name="fragment_games_label">Juegos</string>
-    <string name="fragment_settings_label">Configuración</string>
-    <string name="fragment_profile_label">Perfil</string>
     <string name="GuessThePokemon">Adivina el pokemon</string>
     <string name="fragment_guesspokemon_label">Adivina el pokemon</string>
     <string name="total_wins">Victorias: %d</string>
@@ -21,4 +18,5 @@
     <string name="imageDescription">La imagen del pokemon que el usuario debe adivinar.</string>
     <string name="login">Iniciar sesión</string>
     <string name="signup">Registrarse</string>
+    <string name="welcome_msg">Bienvenido %1$s!</string>
 </resources>
