@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="dadm.pokearcade.ui.login.LoginFragment"
-        android:label="@string/login_fragment_label"
+        android:label="@string/login"
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_signupFragment"
@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/signupFragment"
         android:name="dadm.pokearcade.ui.signup.SignupFragment"
-        android:label="@string/signup_fragment_label"
+        android:label="@string/signup"
         tools:layout="@layout/fragment_signup">
         <action
             android:id="@+id/action_signupFragment_to_loginFragment"
@@ -31,7 +31,7 @@
     <fragment
         android:id="@+id/gamesFragment"
         android:name="dadm.pokearcade.ui.games.GamesFragment"
-        android:label="@string/fragment_games_label"
+        android:label="@string/games"
         tools:layout="@layout/fragment_games">
         <action
             android:id="@+id/action_gamesFragment_to_wordleFragment"
@@ -44,13 +44,13 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="dadm.pokearcade.ui.settings.SettingsFragment"
-        android:label="@string/fragment_settings_label"
+        android:label="@string/settings"
         tools:layout="@layout/fragment_settings" />
 
     <fragment
         android:id="@+id/profileFragment"
         android:name="dadm.pokearcade.ui.profile.ProfileFragment"
-        android:label="@string/fragment_profile_label"
+        android:label="@string/profile"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
