@@ -2,6 +2,9 @@
 <resources>
     <string name="welcome">Bienvenido Juan</string>
     <string name="pokemonQuestion">¿Quién es ese pokemon?</string>
+    <string name="easy">Fácil</string>
+    <string name="medium">Medio</string>
+    <string name="high">Dificil</string>
     <string name="username_hint">Usuario</string>
     <string name="password_hint">Contraseña</string>
     <string name="register_text">Si no está registrado, click aquí</string>
@@ -19,4 +22,5 @@
     <string name="login">Iniciar sesión</string>
     <string name="signup">Registrarse</string>
     <string name="welcome_msg">Bienvenido %1$s!</string>
+    <string name="title_difficulty_settings">Dificultad</string>
 </resources>

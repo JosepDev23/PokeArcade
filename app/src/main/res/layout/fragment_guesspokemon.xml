@@ -37,8 +37,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pokemonQuestion"
         app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintWidth_percent="0.5"
-        style="@style/MaterialButton"/>
+        app:layout_constraintWidth_percent="0.5"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnPokemon2"
@@ -49,8 +48,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnPokemon1"
-        app:layout_constraintWidth_percent="0.5"
-        style="@style/MaterialButton"/>
+        app:layout_constraintWidth_percent="0.5"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnPokemon3"
@@ -63,8 +61,7 @@
         app:layout_constraintTop_toBottomOf="@id/btnPokemon2"
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintVertical_chainStyle="packed"
-        app:layout_constraintWidth_percent="0.5"
-        style="@style/MaterialButton"/>
+        app:layout_constraintWidth_percent="0.5"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnPokemon4"
@@ -76,7 +73,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnPokemon3"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.5"
-        style="@style/MaterialButton"/>
+        app:layout_constraintWidth_percent="0.5"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

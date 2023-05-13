@@ -26,4 +26,6 @@
     <string name="title_dark_mode_settings">Dark mode</string>
     <string name="welcome_msg">Welcome %1$s!</string>
     <string name="imageDescription">The pokemon image the user has to guess.</string>
+    <string name="title_difficulty_settings">Game difficulty</string>
+
 </resources>
