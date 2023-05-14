@@ -77,7 +77,6 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
         }
 
         viewModel.restartGame.observe(viewLifecycleOwner) { restartGame ->
-            Log.d("GuessPokemonFragment", "restartGame: $restartGame")
             if (restartGame) {
                 restartGame()
                 viewModel.resetRestartGame()
@@ -113,8 +112,7 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
     }
 
     private fun restartGame() {
-        val navController = findNavController()
-        navController.navigate(R.id.guessPokemonFragment)
+        viewModel.getPokemonList()
     }
 
     override fun onDestroyView() {

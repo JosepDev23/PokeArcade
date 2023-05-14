@@ -35,7 +35,6 @@ class GuessPokemonViewModel @Inject constructor(
 
     fun restartGame() {
         viewModelScope.launch {
-            Log.d("GuessPokemonViewModel-.-----", "restartGame()")
             _restartGame.value = true
         }
     }
