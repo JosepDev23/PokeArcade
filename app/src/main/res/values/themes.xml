@@ -1,21 +1,31 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.PokeArcade" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/md_theme_light_secondary</item>
-        <item name="colorPrimaryVariant">@color/md_theme_dark_onTertiaryContainer</item>
-        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
-        <item name="colorPrimaryContainer">@color/md_theme_dark_onTertiaryContainer</item>
-        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryVariant">@color/light_blue</item>
+        <item name="colorOnPrimary">@color/light_yellow</item>
+        <item name="colorPrimaryContainer">@color/light_blue</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/md_theme_light_secondary</item>
-        <item name="colorSecondaryVariant">@color/md_theme_light_secondaryContainer</item>
-        <item name="colorOnSecondary">@color/md_theme_light_onPrimary</item>
-        <item name="colorSecondaryContainer">@color/md_theme_light_secondaryContainer</item>
-        <item name="colorOnSecondaryContainer">@color/md_theme_light_onSecondaryContainer</item>
+        <item name="colorOnSecondary">@color/light_yellow</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@color/dark_blue</item>
         <!-- Customize your theme here. -->
-        <item name="colorSurface">@color/md_theme_light_primaryContainer</item>
+        <item name="colorSurface">@color/light_blue</item>
+        <!-- Navigation. -->
+        <item name="android:navigationBarColor">@color/dark_blue</item>
     </style>
 
+    <!-- GamesFragment buttons. -->
+    <style name="ButtonGames" parent="Widget.MaterialComponents.Button">
+        <item name="shapeAppearance">@style/ShapeAppearanceButtonGames</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="backgroundTint">@color/dark_blue2</item>
+
+    </style>
+
+    <style name="ShapeAppearanceButtonGames" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

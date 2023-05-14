@@ -2,11 +2,11 @@
     <!-- Base application theme. -->
     <style name="Theme.PokeArcade" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/md_theme_light_secondary</item>
-        <item name="colorPrimaryVariant">@color/md_theme_dark_onTertiaryContainer</item>
-        <item name="colorOnPrimary">@color/md_theme_light_onPrimary</item>
-        <item name="colorPrimaryContainer">@color/md_theme_dark_onTertiaryContainer</item>
-        <item name="colorOnPrimaryContainer">@color/md_theme_light_onPrimaryContainer</item>
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryVariant">@color/dark_blue2</item>
+        <item name="colorOnPrimary">@color/light_blue</item>
+        <item name="colorPrimaryContainer">@color/light_blue</item>
+        <item name="colorOnPrimaryContainer">@color/dark_blue2</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
