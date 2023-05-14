@@ -30,11 +30,11 @@ class GamesFragment : Fragment(R.layout.fragment_games) {
                 binding.welcomeText.text = getString(R.string.welcome_msg, user.username)
             } else {
                 binding.welcomeText.text =
-                    getString(R.string.userNotLoggedIn) // or another default text
+                    getString(R.string.userNotLoggedIn)
             }
         }
 
-        binding.btnWordle.setOnClickListener {
+        binding.btnPokequiz.setOnClickListener {
             val action = GamesFragmentDirections.actionGamesFragmentToWordleFragment()
             findNavController().navigate(action)
         }

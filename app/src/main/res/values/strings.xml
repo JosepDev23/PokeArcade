@@ -30,5 +30,27 @@
     <string name="dialogExit">Exit</string>
     <string name="title_difficulty_settings">Game difficulty</string>
     <string name="userNotLoggedIn">User not logged in</string>
-
+    <string name="pokequiz" translatable="false">PokeQuiz</string>
+    <string name="question_1">What is Pikachu\'s evolution?</string>
+    <string name="question_2">What is the fire starter of the first generation?</string>
+    <string name="question_3">What is the water starter of the first generation?</string>
+    <string name="question_4">What is the grass starter of the first generation?</string>
+    <string name="question_5">What is the name of the region of the first generation?</string>
+    <string name="question_6">What is the name of the semi-legendary Dragon/Flying type Pokémon from the first generation?</string>
+    <string name="question_7">What is the name of the purple Pokémon that transforms into other Pokémon?</string>
+    <string name="question_8">What is the name of the region of the ninth generation?</string>
+    <string name="question_9">What is the name of the Grass/Steel type Pokémon introduced on the seventh generation?</string>
+    <string name="question_10">What is the name of the Dragon/Electric type legendary Pokémon introduced on the fifth generation?</string>
+    <string name="raichu" translatable="false">Raichu</string>
+    <string name="charmander" translatable="false">Charmander</string>
+    <string name="squirtle" translatable="false">Squirtle</string>
+    <string name="bulbasaur" translatable="false">Bulbasaur</string>
+    <string name="kanto" translatable="false">Kanto</string>
+    <string name="dragonite" translatable="false">Dragonite</string>
+    <string name="ditto" translatable="false">Ditto</string>
+    <string name="paldea" translatable="false">Paldea</string>
+    <string name="kartana" translatable="false">Kartana</string>
+    <string name="kekrom" translatable="false">Zekrom</string>
+    <string name="answer">Answer</string>
+    <string name="submit">Submit</string>
 </resources>

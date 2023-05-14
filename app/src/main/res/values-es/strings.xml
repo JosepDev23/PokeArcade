@@ -30,4 +30,16 @@
     <string name="dialogExit">Salir</string>
     <string name="title_difficulty_settings">Dificultad</string>
     <string name="userNotLoggedIn">No hay un usuario logueado</string>
+    <string name="question_1">¿Cuál es la evolución de Pikachu?</string>
+    <string name="question_2">¿Cuál es el inicial de tipo fuego de primera generación?</string>
+    <string name="question_3">¿Cuál es el inicial de tipo agua de primera generación?</string>
+    <string name="question_4">¿Cuál es el inicial de tipo planta de primera generación?</string>
+    <string name="question_5">¿Cuál es el nombre de la región de la primera generación?</string>
+    <string name="question_6">¿Cuál es el nombre del pokémon semi-legendario de tipo Dragón/Volador de primera generación?</string>
+    <string name="question_7">¿Cuál es el nombre del pokémon morado que se transforma en otros pokemon?</string>
+    <string name="question_8">¿Cuál es el nombre de la región de la novena generación?</string>
+    <string name="question_9">¿Cuál es el nombre del pokémon de tipo Planta/Acero introducido en la séptima generación?</string>
+    <string name="question_10">¿Cuál es el nombre del pokémon legendario de tipo Dragón/Eléctrico introducido en quinta generación?</string>
+    <string name="answer">Respuesta</string>
+    <string name="submit">Enviar</string>
 </resources>
