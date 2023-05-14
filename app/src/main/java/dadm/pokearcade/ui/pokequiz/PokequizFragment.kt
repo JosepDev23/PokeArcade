@@ -59,5 +59,6 @@ class PokequizFragment : Fragment(R.layout.fragment_pokequiz) {
     private fun restartGame() {
         _quiz = viewModel.getRandomQuiz(loginViewModel.user.value!!.difficulty)
         binding.questionTextView.text = quiz.question
+        binding.answerTextInputEditText.setText("")
     }
 }
