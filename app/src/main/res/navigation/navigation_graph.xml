@@ -35,7 +35,7 @@
         tools:layout="@layout/fragment_games">
         <action
             android:id="@+id/action_gamesFragment_to_wordleFragment"
-            app:destination="@+id/wordleFragment" />
+            app:destination="@+id/pokequizFragment" />
         <action
             android:id="@+id/action_gamesFragment_to_guessPokemonFragment"
             app:destination="@+id/guessPokemonFragment" />
@@ -54,14 +54,23 @@
         tools:layout="@layout/fragment_profile" />
 
     <fragment
-        android:id="@+id/wordleFragment"
+        android:id="@+id/pokequizFragment"
         android:name="dadm.pokearcade.ui.pokequiz.PokequizFragment"
         android:label="@string/pokequiz"
-        tools:layout="@layout/fragment_pokequiz" />
+        tools:layout="@layout/fragment_pokequiz">
+        <action
+            android:id="@+id/action_pokequizFragment_to_gamesFragment"
+            app:destination="@+id/gamesFragment" />
+    </fragment>
+
     <fragment
         android:id="@+id/guessPokemonFragment"
         android:name="dadm.pokearcade.ui.guessPokemon.GuessPokemonFragment"
         android:label="@string/fragment_guesspokemon_label"
-        tools:layout="@layout/fragment_guesspokemon" />
+        tools:layout="@layout/fragment_guesspokemon">
+        <action
+            android:id="@+id/action_guessPokemonFragment_to_gamesFragment"
+            app:destination="@+id/gamesFragment" />
+    </fragment>
 
 </navigation>

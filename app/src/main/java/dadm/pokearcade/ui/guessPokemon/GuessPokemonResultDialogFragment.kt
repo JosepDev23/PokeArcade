@@ -5,6 +5,7 @@ import android.app.Dialog
 import android.os.Bundle
 import android.view.KeyEvent
 import androidx.fragment.app.DialogFragment
+import androidx.navigation.fragment.findNavController
 import dadm.pokearcade.R
 
 class GuessPokemonResultDialogFragment(
@@ -26,7 +27,8 @@ class GuessPokemonResultDialogFragment(
                 viewModel.restartGame()
             }
             .setNegativeButton(R.string.dialogExit) { _, _ ->
-                requireActivity().finish()
+                val action = GuessPokemonFragmentDirections.actionGuessPokemonFragmentToGamesFragment()
+                findNavController().navigate(action)
             }
 
         val dialog = builder.create()

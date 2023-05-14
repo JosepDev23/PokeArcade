@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.profileFragment,
                 R.id.settingsFragment,
                 R.id.guessPokemonFragment,
-                R.id.wordleFragment,
+                R.id.pokequizFragment,
                 R.id.loginFragment,
                 R.id.signupFragment
             )
