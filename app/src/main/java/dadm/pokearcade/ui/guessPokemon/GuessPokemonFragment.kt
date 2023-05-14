@@ -12,6 +12,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.android.material.snackbar.Snackbar
 import dadm.pokearcade.R
 import dadm.pokearcade.databinding.FragmentGuesspokemonBinding
+import dadm.pokearcade.ui.ResultDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
