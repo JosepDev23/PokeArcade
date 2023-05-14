@@ -2,6 +2,7 @@ package dadm.pokearcade.data.pokemons
 
 import android.util.Log
 import dadm.pokearcade.data.pokemons.model.PokemonDto
+import dadm.pokearcade.domain.model.Difficulty
 import okhttp3.MediaType
 import okhttp3.ResponseBody
 import retrofit2.Response
@@ -10,7 +11,6 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import javax.inject.Inject
 import kotlin.random.Random
-
 class PokemonsDataSourceImpl
 @Inject constructor(retrofit: Retrofit) : PokemonsDataSource {
 
@@ -34,13 +34,15 @@ class PokemonsDataSourceImpl
         }
     }
 
-    override suspend fun getPokemonList(): List<Response<PokemonDto>> {
+    override suspend fun getPokemonList(difficulty: Difficulty): List<Response<PokemonDto>> {
         var count = 0
         val limit = 4
         val pokemonList = mutableListOf<Response<PokemonDto>>()
 
+
+
         while (count < limit) {
-            val randomPokemonId = Random.nextInt(1, 152) // Generate a random Pokemon Id
+            val randomPokemonId = getRandomPokemonId(difficulty) // Generate a random Pokemon Id
             try {
                 pokemonList.add(retrofitPokemonService.getPokemon(randomPokemonId))
             } catch (e: Exception) {
@@ -51,5 +53,14 @@ class PokemonsDataSourceImpl
         }
         Log.d("pokemonList", pokemonList.toString())
         return pokemonList
+    }
+
+    private fun getRandomPokemonId(difficulty: Difficulty): Int {
+        val maxPokemonId = when (difficulty) {
+            Difficulty.EASY -> 151 // Only 151 Pokémon in the first generation
+            Difficulty.NORMAL -> 151+100+135+107 // Until 4 generation included
+            Difficulty.HARD -> 1008 // All
+        }
+        return Random.nextInt(1, maxPokemonId + 1)
     }
 }

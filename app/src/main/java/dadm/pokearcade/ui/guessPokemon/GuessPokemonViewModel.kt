@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dadm.pokearcade.data.pokemons.PokemonsRepository
+import dadm.pokearcade.domain.model.Difficulty
 import dadm.pokearcade.domain.model.Pokemon
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -25,9 +26,9 @@ class GuessPokemonViewModel @Inject constructor(
     val error: LiveData<Throwable?> = _error
     val restartGame: LiveData<Boolean> = _restartGame
 
-    fun getPokemonList() {
+    fun getPokemonList(difficulty: Difficulty) {
         viewModelScope.launch {
-            _pokemonList.value = pokemonsRepository.getPokemonList()
+            _pokemonList.value = pokemonsRepository.getPokemonList(difficulty)
                 .map { it.getOrThrow() }
             _pokemon.value = _pokemonList.value?.random()
         }

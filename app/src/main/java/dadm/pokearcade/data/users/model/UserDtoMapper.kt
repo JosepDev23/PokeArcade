@@ -10,7 +10,8 @@ fun UserDto.toDomain(): User = User(
     username = username,
     password = password,
     wins = wins,
-    games = games
+    games = games,
+    difficulty = difficulty
 )
 
 /**
@@ -21,5 +22,6 @@ fun User.toDto(): UserDto = UserDto(
     username = username,
     password = password,
     wins = wins,
-    games = games
+    games = games,
+    difficulty = difficulty
 )
