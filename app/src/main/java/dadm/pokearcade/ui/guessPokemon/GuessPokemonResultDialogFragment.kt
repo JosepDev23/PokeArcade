@@ -1,4 +1,4 @@
-package dadm.pokearcade.ui
+package dadm.pokearcade.ui.guessPokemon
 
 import android.app.AlertDialog
 import android.app.Dialog
@@ -6,9 +6,8 @@ import android.os.Bundle
 import android.view.KeyEvent
 import androidx.fragment.app.DialogFragment
 import dadm.pokearcade.R
-import dadm.pokearcade.ui.guessPokemon.GuessPokemonViewModel
 
-class ResultDialogFragment(
+class GuessPokemonResultDialogFragment(
     private val isCorrect: Boolean,
     private val pokemonName: String,
     private val viewModel: GuessPokemonViewModel

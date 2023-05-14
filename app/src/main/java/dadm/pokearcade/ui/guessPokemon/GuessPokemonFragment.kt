@@ -12,7 +12,6 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.android.material.snackbar.Snackbar
 import dadm.pokearcade.R
 import dadm.pokearcade.databinding.FragmentGuesspokemonBinding
-import dadm.pokearcade.ui.ResultDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -122,8 +121,8 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
         pokemonName: String,
         viewModel: GuessPokemonViewModel
     ) {
-        val resultDialogFragment = ResultDialogFragment(isCorrect, pokemonName, viewModel)
-        resultDialogFragment.show(parentFragmentManager, "ResultDialog")
+        val guessPokemonResultDialogFragment = GuessPokemonResultDialogFragment(isCorrect, pokemonName, viewModel)
+        guessPokemonResultDialogFragment.show(parentFragmentManager, "ResultDialog")
     }
 
     private fun restartGame() {
