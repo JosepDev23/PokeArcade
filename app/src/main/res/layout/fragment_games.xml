@@ -8,7 +8,7 @@
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/btnPokequiz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,6 +17,12 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <com.google.android.material.button.MaterialButton
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:textColor="@color/md_theme_light_onPrimaryContainer"
+        android:textAppearance="?attr/textAppearanceLabelLarge"
+        android:textSize="26sp"
+        app:backgroundTint="@color/md_theme_light_primaryContainer"
+        app:shapeAppearance="?attr/shapeCornerFamily"
         android:id="@+id/btnPokequiz"
         android:layout_width="0dp"
         android:layout_height="100dp"
@@ -31,14 +37,22 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnGuessImage"
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:text="@string/GuessThePokemon"
+        android:textAppearance="?attr/textAppearanceLabelLarge"
+        android:textColor="@color/md_theme_light_onPrimaryContainer"
+        android:textSize="26sp"
+        app:backgroundTint="@color/md_theme_light_primaryContainer"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnPokequiz"
         app:layout_constraintVertical_bias="0.5"
-        app:layout_constraintWidth_percent="0.5" />
+        app:layout_constraintWidth_percent="0.5"
+        app:shapeAppearance="?attr/shapeAppearanceSmallComponent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,8 +24,16 @@
     <string name="title_username_settings">Username</string>
     <string name="title_language_settings">Language</string>
     <string name="title_dark_mode_settings">Dark mode</string>
+    <string name="InternetErrorMsg">Internet connection is not available</string>
     <string name="welcome_msg">Welcome %1$s!</string>
     <string name="imageDescription">The pokemon image the user has to guess.</string>
+    <string name="correctAnswer">CORRECT !!!</string>
+    <string name="incorrectAnswer">"INCORRECT "</string>
+    <string name="correctMessage">Good Job!</string>
+    <string name="incorrectMessage">Ups! This Pokemon is: %1$s !</string>
+    <string name="dialogContinue">Again</string>
+    <string name="dialogExit">Exit</string>
+    <string name="title_difficulty_settings">Game difficulty</string>
     <string name="pokequiz" translatable="false">PokeQuiz</string>
     <string name="question_1">What is Pikachu\'s evolution?</string>
     <string name="question_2">What is the fire starter of the first generation?</string>
