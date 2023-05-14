@@ -17,7 +17,7 @@ import java.util.*
 import javax.inject.Inject
 
 /**
- * The setting screen with the functionality to change language.
+ * The setting screen with the functionality to change the preferences of the app.
  */
 @AndroidEntryPoint
 class SettingsFragment : PreferenceFragmentCompat(),
@@ -49,6 +49,10 @@ class SettingsFragment : PreferenceFragmentCompat(),
         setPreferencesFromResource(R.xml.preferences_settings, rootKey)
     }
 
+    /**
+     * The preference the user want to change.
+     * The language of the app and the new user name.
+     */
     override fun onSharedPreferenceChanged(sharedPreferences: SharedPreferences?, key: String?) {
         when (key) {
             "language" -> {
@@ -68,16 +72,23 @@ class SettingsFragment : PreferenceFragmentCompat(),
         }
     }
 
+    /**
+     * Change the language of the application.
+     * The language parameter represents the new language of the app
+     */
     private fun setLocale(language: String?) {
         language?.let {
+            //Obtain the new language
             val locale = Locale(it)
             Locale.setDefault(locale)
+            //Update the new language
             val config = Configuration()
             config.setLocale(locale)
             requireContext().resources.updateConfiguration(
                 config,
                 requireContext().resources.displayMetrics
             )
+            //The activity need to restart to work on
             requireActivity().recreate()
         }
     }
