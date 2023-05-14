@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnWordle"
+        app:layout_constraintBottom_toTopOf="@+id/btnPokequiz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -17,10 +17,10 @@
         app:layout_constraintVertical_chainStyle="packed" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnWordle"
+        android:id="@+id/btnPokequiz"
         android:layout_width="0dp"
         android:layout_height="100dp"
-        android:text="@string/Wordle"
+        android:text="@string/pokequiz"
         app:layout_constraintBottom_toTopOf="@id/btnGuessImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnWordle"
+        app:layout_constraintTop_toBottomOf="@id/btnPokequiz"
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintWidth_percent="0.5" />
 

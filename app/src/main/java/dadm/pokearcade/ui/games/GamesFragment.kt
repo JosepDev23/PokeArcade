@@ -39,7 +39,7 @@ class GamesFragment : Fragment(R.layout.fragment_games) {
 
 
 
-        binding.btnWordle.setOnClickListener {
+        binding.btnPokequiz.setOnClickListener {
             val action = GamesFragmentDirections.actionGamesFragmentToWordleFragment()
             findNavController().navigate(action)
         }

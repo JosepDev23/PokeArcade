@@ -37,16 +37,16 @@
     <string name="question_8">What is the name of the region of the ninth generation?</string>
     <string name="question_9">What is the name of the Grass/Steel type Pokémon introduced on the seventh generation?</string>
     <string name="question_10">What is the name of the Dragon/Electric type legendary Pokémon introduced on the fifth generation?</string>
-    <string name="raichu">Raichu</string>
-    <string name="charmander">Charmander</string>
-    <string name="squirtle">Squirtle</string>
-    <string name="bulbasaur">Bulbasaur</string>
-    <string name="kanto">Kanto</string>
-    <string name="dragonite">Dragonite</string>
-    <string name="ditto">Ditto</string>
-    <string name="paldea">Paldea</string>
-    <string name="kartana">Kartana</string>
-    <string name="kekrom">Zekrom</string>
+    <string name="raichu" translatable="false">Raichu</string>
+    <string name="charmander" translatable="false">Charmander</string>
+    <string name="squirtle" translatable="false">Squirtle</string>
+    <string name="bulbasaur" translatable="false">Bulbasaur</string>
+    <string name="kanto" translatable="false">Kanto</string>
+    <string name="dragonite" translatable="false">Dragonite</string>
+    <string name="ditto" translatable="false">Ditto</string>
+    <string name="paldea" translatable="false">Paldea</string>
+    <string name="kartana" translatable="false">Kartana</string>
+    <string name="kekrom" translatable="false">Zekrom</string>
     <string name="answer">Answer</string>
     <string name="submit">Submit</string>
 </resources>
