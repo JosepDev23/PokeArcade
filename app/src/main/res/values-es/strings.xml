@@ -42,4 +42,5 @@
     <string name="question_10">¿Cuál es el nombre del pokémon legendario de tipo Dragón/Eléctrico introducido en quinta generación?</string>
     <string name="answer">Respuesta</string>
     <string name="submit">Enviar</string>
+    <string name="incorrectAnswerMessage">Ups! La respuesta correcta es: %1$s !</string>
 </resources>

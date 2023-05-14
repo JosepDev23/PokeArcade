@@ -2,12 +2,16 @@ package dadm.pokearcade.ui.pokequiz
 
 import android.app.Application
 import android.content.Context
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import dadm.pokearcade.R
 import dadm.pokearcade.data.users.UsersRepository
 import dadm.pokearcade.domain.model.Difficulty
 import dadm.pokearcade.domain.model.Quiz
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -15,6 +19,10 @@ class PokequizViewModel @Inject constructor(
     application: Application
 ) : ViewModel() {
     val context: Context = application.applicationContext
+
+    private val _restartGame = MutableLiveData<Boolean>()
+    val restartGame: LiveData<Boolean> = _restartGame
+
     private val quizzes: List<Quiz> = listOf(
         Quiz(
             context.getString(R.string.question_1),
@@ -70,5 +78,17 @@ class PokequizViewModel @Inject constructor(
 
     fun getRandomQuiz(): Quiz {
         return quizzes.random()
+    }
+
+    fun restartGame() {
+        viewModelScope.launch {
+            _restartGame.value = true
+        }
+    }
+
+    fun resetRestartGame() {
+        viewModelScope.launch {
+            _restartGame.value = false
+        }
     }
 }

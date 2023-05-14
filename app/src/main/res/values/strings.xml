@@ -26,6 +26,7 @@
     <string name="incorrectAnswer">"INCORRECT "</string>
     <string name="correctMessage">Good Job!</string>
     <string name="incorrectMessage">Ups! This Pokemon is: %1$s !</string>
+    <string name="incorrectAnswerMessage">Ups! The correct answer is: %1$s !</string>
     <string name="dialogContinue">Again</string>
     <string name="dialogExit">Exit</string>
     <string name="title_difficulty_settings">Game difficulty</string>

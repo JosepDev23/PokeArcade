@@ -1,22 +1,24 @@
-package dadm.pokearcade.ui.guessPokemon
+package dadm.pokearcade.ui.pokequiz
 
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
 import android.view.KeyEvent
 import androidx.fragment.app.DialogFragment
+import androidx.navigation.fragment.findNavController
 import dadm.pokearcade.R
+import dadm.pokearcade.ui.guessPokemon.GuessPokemonFragmentDirections
 
-class ResultDialogFragment(
+class PokequizResultDialogFragment(
     private val isCorrect: Boolean,
-    private val pokemonName: String,
-    private val viewModel: GuessPokemonViewModel
+    private val correctAnswer: String,
+    private val viewModel: PokequizViewModel
 ) : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val title = if (isCorrect) R.string.correctAnswer else R.string.incorrectAnswer
         val message = if (isCorrect) getString(R.string.correctMessage) else getString(
-            R.string.incorrectMessage,
-            pokemonName
+            R.string.incorrectAnswerMessage,
+            correctAnswer
         )
         val builder = AlertDialog.Builder(requireContext())
             .setTitle(title)
@@ -26,7 +28,8 @@ class ResultDialogFragment(
                 viewModel.restartGame()
             }
             .setNegativeButton(R.string.dialogExit) { _, _ ->
-                requireActivity().finish()
+                val action = PokequizFragmentDirections.actionPokequizFragmentToGamesFragment()
+                findNavController().navigate(action)
             }
 
         val dialog = builder.create()
