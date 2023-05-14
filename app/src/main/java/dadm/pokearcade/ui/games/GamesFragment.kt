@@ -25,8 +25,6 @@ class GamesFragment : Fragment(R.layout.fragment_games) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentGamesBinding.bind(view)
 
-
-
         loginViewModel.user.observe(viewLifecycleOwner) { user ->
             if (user != null) {
                 binding.welcomeText.text = getString(R.string.welcome_msg, user.username)
@@ -35,8 +33,6 @@ class GamesFragment : Fragment(R.layout.fragment_games) {
                     getString(R.string.userNotLoggedIn) // or another default text
             }
         }
-
-
 
         binding.btnWordle.setOnClickListener {
             val action = GamesFragmentDirections.actionGamesFragmentToWordleFragment()

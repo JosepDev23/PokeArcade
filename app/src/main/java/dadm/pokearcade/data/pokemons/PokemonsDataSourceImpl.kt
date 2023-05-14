@@ -17,12 +17,12 @@ class PokemonsDataSourceImpl
     private val retrofitPokemonService = retrofit.create(PokemonRetrofit::class.java)
 
     interface PokemonRetrofit {
-        @GET("api/v2/pokemon/{id}") //Número ramdom de 1 a 151 (primera generación)
+        @GET("api/v2/pokemon/{id}")
         suspend fun getPokemon(@Path("id") id: Int): Response<PokemonDto>
     }
 
     override suspend fun getPokemon(): Response<PokemonDto> {
-        val randomPokemonId = Random.nextInt(1, 152) // Generate a random Pokemon Id
+        val randomPokemonId = Random.nextInt(1, 152) // Generate a random Pokemon Id from 1st gen
         return try {
             retrofitPokemonService.getPokemon(randomPokemonId)
         } catch (e: Exception) {

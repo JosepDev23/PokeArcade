@@ -6,9 +6,10 @@ import dadm.pokearcade.utils.NoInternetException
 import javax.inject.Inject
 
 class PokemonsRepositoryImpl
-@Inject constructor(private val connectivityChecker: ConnectivityChecker,
-                    private val pokemonsDataSource: PokemonsDataSource)
-    : PokemonsRepository {
+@Inject constructor(
+    private val connectivityChecker: ConnectivityChecker,
+    private val pokemonsDataSource: PokemonsDataSource
+) : PokemonsRepository {
     override suspend fun getPokemon(): Result<Pokemon> {
         return if (connectivityChecker.isConnectionAvailable()) {
             pokemonsDataSource.getPokemon().toDomain()

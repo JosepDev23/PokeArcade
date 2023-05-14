@@ -115,6 +115,7 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
 
         }
     }
+
     private fun showResultDialog(
         isCorrect: Boolean,
         pokemonName: String,
@@ -123,7 +124,6 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
         val resultDialogFragment = ResultDialogFragment(isCorrect, pokemonName, viewModel)
         resultDialogFragment.show(parentFragmentManager, "ResultDialog")
     }
-
 
     private fun restartGame() {
         val navController = findNavController()
