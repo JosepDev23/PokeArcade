@@ -6,6 +6,4 @@ import javax.inject.Inject
 
 class ProfileViewModel @Inject constructor(
     usersRepository: UsersRepository
-) : ViewModel() {
-
-}
+) : ViewModel()
