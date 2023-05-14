@@ -3,14 +3,16 @@ package dadm.pokearcade.ui.settings
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.activityViewModels
+import dadm.pokearcade.ui.login.LoginViewModel
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.EditTextPreference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
 import dadm.pokearcade.R
 import dadm.pokearcade.data.users.UsersRepository
-import dadm.pokearcade.ui.login.LoginViewModel
+import dadm.pokearcade.domain.model.Difficulty
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import java.util.*
@@ -69,6 +71,27 @@ class SettingsFragment : PreferenceFragmentCompat(),
                     }
                 }
             }
+            "difficulty" -> {
+                val difficulty = sharedPreferences?.getString("difficulty", null)
+                val user = loginViewModel.user.value
+                difficulty?.let {
+                    when (difficulty) {
+                        "easy" -> {
+                            user?.difficulty = Difficulty.EASY
+                        }
+                        "medium" -> {
+                            user?.difficulty = Difficulty.NORMAL
+                        }
+                        "high" -> {
+                            user?.difficulty = Difficulty.HARD
+                        }
+                    }
+                    lifecycleScope.launch {
+                        usersRepository.updateUser(user!!)
+                    }
+                }
+            }
+
         }
     }
 

@@ -35,6 +35,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentLoginBinding.bind(view)
 
+
         binding.loginButton.setOnClickListener {
             val username = binding.usernameEditText.text.toString()
             val password = binding.passwordEditText.text.toString()

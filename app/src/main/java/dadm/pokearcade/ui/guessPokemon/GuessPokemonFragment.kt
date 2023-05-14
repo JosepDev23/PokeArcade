@@ -34,7 +34,7 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentGuesspokemonBinding.bind(view)
 
-        viewModel.getPokemonList()
+        viewModel.getPokemonList(loginViewModel.user.value!!.difficulty)
 
         viewModel.pokemon.observe(viewLifecycleOwner) { pokemon ->
             _answerPokemonName.value = pokemon.name
@@ -112,7 +112,7 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
     }
 
     private fun restartGame() {
-        viewModel.getPokemonList()
+        viewModel.getPokemonList(loginViewModel.user.value!!.difficulty)
     }
 
     override fun onDestroyView() {

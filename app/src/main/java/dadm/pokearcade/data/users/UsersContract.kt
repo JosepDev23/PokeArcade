@@ -10,5 +10,6 @@ object UsersContract {
         const val COLUMN_PASSWORD = "password"
         const val COLUMN_WINS = "wins"
         const val COLUMN_GAMES = "games"
+        const val COLUMN_DIFFICULTY = "difficulty"
     }
 }

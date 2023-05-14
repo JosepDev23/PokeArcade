@@ -13,6 +13,7 @@ class GuessPokemonResultDialogFragment(
     private val pokemonName: String,
     private val viewModel: GuessPokemonViewModel
 ) : DialogFragment() {
+
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val title = if (isCorrect) R.string.correctAnswer else R.string.incorrectAnswer
         val message = if (isCorrect) getString(R.string.correctMessage) else getString(

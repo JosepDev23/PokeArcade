@@ -5,5 +5,6 @@ data class User(
     var username: String,
     val password: String,
     val wins: Int,
-    val games: Int
+    val games: Int,
+    var difficulty: Difficulty
 )

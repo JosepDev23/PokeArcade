@@ -3,12 +3,14 @@ package dadm.pokearcade.data.users.model
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import dadm.pokearcade.data.users.UsersContract.Entries.COLUMN_DIFFICULTY
 import dadm.pokearcade.data.users.UsersContract.Entries.COLUMN_GAMES
 import dadm.pokearcade.data.users.UsersContract.Entries.COLUMN_ID
 import dadm.pokearcade.data.users.UsersContract.Entries.COLUMN_PASSWORD
 import dadm.pokearcade.data.users.UsersContract.Entries.COLUMN_USERNAME
 import dadm.pokearcade.data.users.UsersContract.Entries.COLUMN_WINS
 import dadm.pokearcade.data.users.UsersContract.Entries.TABLE_USERS
+import dadm.pokearcade.domain.model.Difficulty
 
 /**
  * The userDTO with his four columns.
@@ -30,5 +32,8 @@ data class UserDto(
     val wins: Int,
 
     @ColumnInfo(name = COLUMN_GAMES)
-    val games: Int
+    val games: Int,
+
+    @ColumnInfo(name = COLUMN_DIFFICULTY)
+    val difficulty: Difficulty
 )

@@ -28,6 +28,8 @@ class GamesFragment : Fragment(R.layout.fragment_games) {
         loginViewModel.user.observe(viewLifecycleOwner) { user ->
             if (user != null) {
                 binding.welcomeText.text = getString(R.string.welcome_msg, user.username)
+
+                binding.difficultyText.text = getString(R.string.difficultyInfo, user.difficulty.toString())
             } else {
                 binding.welcomeText.text =
                     getString(R.string.userNotLoggedIn)

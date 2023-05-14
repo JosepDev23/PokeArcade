@@ -76,8 +76,8 @@ class PokequizViewModel @Inject constructor(
         ),
     )
 
-    fun getRandomQuiz(): Quiz {
-        return quizzes.random()
+    fun getRandomQuiz(difficulty: Difficulty): Quiz {
+        return quizzes.filter { it.difficulty == difficulty }.random()
     }
 
     fun restartGame() {

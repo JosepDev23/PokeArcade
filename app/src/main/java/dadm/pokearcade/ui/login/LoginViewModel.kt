@@ -47,7 +47,8 @@ class LoginViewModel @Inject constructor(
                 user.value!!.username,
                 user.value!!.password,
                 user.value!!.wins + 1,
-                user.value!!.games + 1
+                user.value!!.games + 1,
+                user.value!!.difficulty
             )
         )
     }
@@ -59,7 +60,8 @@ class LoginViewModel @Inject constructor(
                 user.value!!.username,
                 user.value!!.password,
                 user.value!!.wins,
-                user.value!!.games + 1
+                user.value!!.games + 1,
+                user.value!!.difficulty
             )
         )
     }
