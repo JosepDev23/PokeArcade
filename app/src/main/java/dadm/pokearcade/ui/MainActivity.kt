@@ -23,7 +23,8 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        val navController = binding.fragmentContainerView.getFragment<NavHostFragment>().navController
+        val navController =
+            binding.fragmentContainerView.getFragment<NavHostFragment>().navController
 
         binding.bottomNavigationView as NavigationBarView
         binding.bottomNavigationView.setupWithNavController(navController)
@@ -31,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         /**
          * The navigation bar only show on the game, profile and settings fragment.
          */
-
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.gamesFragment -> {
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
          * The configuration of the action bar
          */
         setSupportActionBar(binding.idMaterialToolBar)
-        var appBarConfig = AppBarConfiguration(
+        val appBarConfig = AppBarConfiguration(
             setOf(
                 R.id.gamesFragment,
                 R.id.profileFragment,

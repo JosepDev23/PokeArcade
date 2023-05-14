@@ -3,8 +3,6 @@ package dadm.pokearcade.ui.settings
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.EditTextPreference
@@ -25,7 +23,8 @@ import javax.inject.Inject
 class SettingsFragment : PreferenceFragmentCompat(),
     SharedPreferences.OnSharedPreferenceChangeListener {
 
-    @Inject lateinit var usersRepository: UsersRepository
+    @Inject
+    lateinit var usersRepository: UsersRepository
 
     private val loginViewModel: LoginViewModel by activityViewModels()
 
@@ -59,7 +58,7 @@ class SettingsFragment : PreferenceFragmentCompat(),
             "username" -> {
                 val newUsername = sharedPreferences?.getString("username", null)
                 newUsername?.let {
-                    var user = loginViewModel.user.value
+                    val user = loginViewModel.user.value
                     user?.username = it
                     lifecycleScope.launch {
                         usersRepository.updateUser(user!!)

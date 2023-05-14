@@ -13,7 +13,7 @@ import kotlin.random.Random
 
 @HiltViewModel
 class SignupViewModel @Inject constructor(
-    var usersRepository: UsersRepository
+    private var usersRepository: UsersRepository
 ) : ViewModel() {
 
     private val _signupStatus = MutableLiveData<Result<Unit>>()
