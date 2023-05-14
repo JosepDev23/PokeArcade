@@ -2,8 +2,8 @@
 <resources>
     <string name="pokemonQuestion">¿Quién es ese pokemon?</string>
     <string name="easy">Fácil</string>
-    <string name="medium">Medio</string>
-    <string name="high">Difícil</string>
+    <string name="normal">Medio</string>
+    <string name="hard">Difícil</string>
     <string name="username_hint">Usuario</string>
     <string name="password_hint">Contraseña</string>
     <string name="register_text">Si no está registrado, click aquí</string>
@@ -43,4 +43,5 @@
     <string name="answer">Respuesta</string>
     <string name="submit">Enviar</string>
     <string name="incorrectAnswerMessage">Ups! La respuesta correcta es: %1$s !</string>
+    <string name="difficultyInfo">"Estas jugando en modo: %1$s "</string>
 </resources>

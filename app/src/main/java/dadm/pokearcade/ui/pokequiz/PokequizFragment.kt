@@ -32,11 +32,11 @@ class PokequizFragment : Fragment(R.layout.fragment_pokequiz) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentPokequizBinding.bind(view)
 
-        _quiz = viewModel.getRandomQuiz()
+        _quiz = viewModel.getRandomQuiz(loginViewModel.user.value!!.difficulty)
         binding.questionTextView.text = quiz.question
 
         binding.submitButton.setOnClickListener {
-            if (binding.answerTextInputEditText.text.toString() == quiz.response) {
+            if (binding.answerTextInputEditText.text.toString().lowercase() == quiz.response.lowercase()) {
                 lifecycleScope.launch {
                     loginViewModel.handleVictory()
                 }
@@ -49,7 +49,6 @@ class PokequizFragment : Fragment(R.layout.fragment_pokequiz) {
                 val pokequizResultDialogFragment = PokequizResultDialogFragment(false, quiz.response, viewModel)
                 pokequizResultDialogFragment.show(parentFragmentManager, "PokeQuiz result")
             }
-
         }
 
         viewModel.restartGame.observe(viewLifecycleOwner) {
@@ -58,7 +57,7 @@ class PokequizFragment : Fragment(R.layout.fragment_pokequiz) {
     }
 
     private fun restartGame() {
-        _quiz = viewModel.getRandomQuiz()
+        _quiz = viewModel.getRandomQuiz(loginViewModel.user.value!!.difficulty)
         binding.questionTextView.text = quiz.question
     }
 }

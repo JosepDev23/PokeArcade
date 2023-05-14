@@ -112,7 +112,7 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
     }
 
     private fun restartGame() {
-        viewModel.getPokemonList()
+        viewModel.getPokemonList(loginViewModel.user.value!!.difficulty)
     }
 
     override fun onDestroyView() {

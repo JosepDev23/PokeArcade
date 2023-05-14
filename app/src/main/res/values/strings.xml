@@ -54,4 +54,5 @@
     <string name="kekrom" translatable="false">Zekrom</string>
     <string name="answer">Answer</string>
     <string name="submit">Submit</string>
+    <string name="difficultyInfo">You are playing on: %1$s mode</string>
 </resources>
