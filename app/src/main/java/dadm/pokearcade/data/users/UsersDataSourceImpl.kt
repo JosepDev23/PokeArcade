@@ -9,7 +9,7 @@ import javax.inject.Inject
  */
 class UsersDataSourceImpl @Inject constructor(
     private val usersDao: UsersDao
-): UsersDataSource{
+) : UsersDataSource {
 
     /** Register a new user with his DTO. */
     override suspend fun postUser(userDto: UserDto) {

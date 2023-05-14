@@ -11,8 +11,8 @@ class ConnectivityChecker
         val capabilities = connectivityManager
             .getNetworkCapabilities(connectivityManager.activeNetwork)
         return capabilities != null && (
-            capabilities.hasTransport(TRANSPORT_WIFI) ||
-            capabilities.hasTransport(TRANSPORT_CELLULAR)
-        )
+                capabilities.hasTransport(TRANSPORT_WIFI) ||
+                        capabilities.hasTransport(TRANSPORT_CELLULAR)
+                )
     }
 }

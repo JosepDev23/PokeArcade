@@ -10,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
 import dadm.pokearcade.R
 import dadm.pokearcade.databinding.FragmentLoginBinding
-import dadm.pokearcade.ui.login.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 /**

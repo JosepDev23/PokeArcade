@@ -5,28 +5,23 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.NavHostFragment
-
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.google.android.material.snackbar.Snackbar
 import dadm.pokearcade.R
 import dadm.pokearcade.databinding.FragmentGuesspokemonBinding
-import dadm.pokearcade.domain.model.Pokemon
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
- * The UI fragment of the game of guessing the Pokémon from a picture.
+ * The UI fragment of the game of guessing the Pokemon from a picture.
  */
 @AndroidEntryPoint
 class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
     private var _binding: FragmentGuesspokemonBinding? = null
     private val binding get() = _binding!!
     private val _answerPokemonName: MutableLiveData<String> = MutableLiveData()
-    val answerPokemonName: LiveData<String> = _answerPokemonName
 
     private val viewModel: GuessPokemonViewModel by viewModels()
 
@@ -38,7 +33,7 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
 
         viewModel.pokemon.observe(viewLifecycleOwner) { pokemon ->
             _answerPokemonName.value = pokemon.name
-            // Load the Pokémon image using Glide
+            // Load the Pokemon image using Glide
             Glide.with(this)
                 .load(pokemon.image)
                 .transition(DrawableTransitionOptions.withCrossFade())
@@ -46,7 +41,7 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
         }
 
         viewModel.pokemonList.observe(viewLifecycleOwner) { pokemonNames ->
-            // Shuffle the list of Pokémon names
+            // Shuffle the list of Pokemon names
             val shuffledNames = pokemonNames.shuffled()
 
             // Set the names on the buttons
@@ -121,11 +116,14 @@ class GuessPokemonFragment : Fragment(R.layout.fragment_guesspokemon) {
         }
     }
 
-    private fun showResultDialog(isCorrect: Boolean, pokemonName: String, viewModel: GuessPokemonViewModel) {
+    private fun showResultDialog(
+        isCorrect: Boolean,
+        pokemonName: String,
+        viewModel: GuessPokemonViewModel
+    ) {
         val resultDialogFragment = ResultDialogFragment(isCorrect, pokemonName, viewModel)
         resultDialogFragment.show(parentFragmentManager, "ResultDialog")
     }
-
 
     private fun restartGame() {
         val navController = findNavController()

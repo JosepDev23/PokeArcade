@@ -10,11 +10,6 @@
     <string name="settings">Settings</string>
     <string name="Wordle" translatable="false">Wordle</string>
     <string name="GuessThePokemon">Guess the Pokemon</string>
-    <string name="welcome">Welcome Juan</string>
-    <string name="namePokemon1" translatable="false">Pokemon1</string>
-    <string name="namePokemon2" translatable="false">Pokemon2</string>
-    <string name="namePokemon3" translatable="false">Pokemon3</string>
-    <string name="namePokemon4" translatable="false">Pokemon4</string>
     <string name="pokemonQuestion">Who is that pokemon?</string>
     <string name="fragment_wordle_label" translatable="false">Wordle</string>
     <string name="fragment_guesspokemon_label">Guess the Pokemon</string>
@@ -34,6 +29,7 @@
     <string name="dialogContinue">Again</string>
     <string name="dialogExit">Exit</string>
     <string name="title_difficulty_settings">Game difficulty</string>
+    <string name="userNotLoggedIn">User not logged in</string>
     <string name="pokequiz" translatable="false">PokeQuiz</string>
     <string name="question_1">What is Pikachu\'s evolution?</string>
     <string name="question_2">What is the fire starter of the first generation?</string>

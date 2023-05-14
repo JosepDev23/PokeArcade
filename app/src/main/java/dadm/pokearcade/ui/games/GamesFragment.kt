@@ -1,11 +1,9 @@
 package dadm.pokearcade.ui.games
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import dadm.pokearcade.R
 import dadm.pokearcade.databinding.FragmentGamesBinding
@@ -27,17 +25,14 @@ class GamesFragment : Fragment(R.layout.fragment_games) {
         super.onViewCreated(view, savedInstanceState)
         _binding = FragmentGamesBinding.bind(view)
 
-
-
         loginViewModel.user.observe(viewLifecycleOwner) { user ->
             if (user != null) {
                 binding.welcomeText.text = getString(R.string.welcome_msg, user.username)
             } else {
-                binding.welcomeText.text = "User not logged in" // or another default text
+                binding.welcomeText.text =
+                    getString(R.string.userNotLoggedIn)
             }
         }
-
-
 
         binding.btnPokequiz.setOnClickListener {
             val action = GamesFragmentDirections.actionGamesFragmentToWordleFragment()

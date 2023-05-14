@@ -1,6 +1,5 @@
 package dadm.pokearcade.data.users
 
-import android.util.Log
 import dadm.pokearcade.data.users.model.toDomain
 import dadm.pokearcade.data.users.model.toDto
 import dadm.pokearcade.domain.model.User
