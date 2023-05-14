@@ -1,6 +1,5 @@
 package dadm.pokearcade.ui.login
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,13 +7,12 @@ import androidx.lifecycle.viewModelScope
 import dadm.pokearcade.data.users.UsersRepository
 import dadm.pokearcade.domain.model.User
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(
-    var usersRepository: UsersRepository
+    private var usersRepository: UsersRepository
 ) : ViewModel() {
 
     private val _user = MutableLiveData<User?>()

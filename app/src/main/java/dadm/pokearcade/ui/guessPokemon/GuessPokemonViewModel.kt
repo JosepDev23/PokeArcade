@@ -25,19 +25,6 @@ class GuessPokemonViewModel @Inject constructor(
     val error: LiveData<Throwable?> = _error
     val restartGame: LiveData<Boolean> = _restartGame
 
-    fun getPokemon() {
-        viewModelScope.launch {
-            pokemonsRepository.getPokemon()
-                .onSuccess {
-                    _pokemon.value = it
-                }
-                .onFailure {
-                    _error.value = it
-                }
-
-        }
-    }
-
     fun getPokemonList() {
         viewModelScope.launch {
             _pokemonList.value = pokemonsRepository.getPokemonList()
@@ -52,11 +39,13 @@ class GuessPokemonViewModel @Inject constructor(
             _restartGame.value = true
         }
     }
+
     fun resetRestartGame() {
         viewModelScope.launch {
             _restartGame.value = false
         }
     }
+
     fun resetError() {
         _error.value = null
     }

@@ -3,7 +3,7 @@ package dadm.pokearcade.data.users
 object UsersContract {
     const val DATABASE = "users.db"
 
-    object entries {
+    object Entries {
         const val TABLE_USERS = "users"
         const val COLUMN_ID = "id"
         const val COLUMN_USERNAME = "username"
